@@ -1,0 +1,1 @@
+C:\Users\jraja\Documents\GitHub\PasswordsDictionaryBuilder\PasswordsDictionaryBuilder\PasswordsDictionaryBuilder\PasswordsDictionaryBuilder.csproj;x86
