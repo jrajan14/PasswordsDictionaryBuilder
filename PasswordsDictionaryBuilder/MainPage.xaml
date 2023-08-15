@@ -6,10 +6,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1100" Height="798">
 
     <Grid>
-        <ListBox x:Name="ListOfCharacters" HorizontalAlignment="Left" Margin="748,7,0,462" Width="208" SelectionMode="Multiple"/>
+        <ListBox x:Name="ListOfCharacters" HorizontalAlignment="Left" Margin="748,7,0,10" Width="108" SelectionMode="Multiple" FontWeight="Bold" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
         <Button x:Name="AddToList" Content="ADD  &gt;&gt;" Margin="592,7,0,0" VerticalAlignment="Top" Height="50" Width="151" Click="AddToList_Click" FontSize="20"/>
         <Button x:Name="RemoveFromList" Content="&lt;&lt;  REMOVE" Margin="592,62,0,0" VerticalAlignment="Top" Height="50" Width="151" FontSize="20" Click="RemoveFromList_Click"/>
         <TextBox x:Name="TxtCharacter" HorizontalAlignment="Left" Margin="486,7,0,0" TextWrapping="Wrap" Text="X" VerticalAlignment="Top" Height="50" Width="96" RenderTransformOrigin="0.5,0.5" TextAlignment="Center" FontSize="30">
@@ -21,7 +21,10 @@
         <TextBlock HorizontalAlignment="Left" Margin="18,19,0,0" TextWrapping="Wrap" Text="Password Length" VerticalAlignment="Top" Width="159" FontSize="20"/>
         <Button x:Name="BtnSetPassLen" Content="SET" Margin="300,7,0,0" VerticalAlignment="Top" Height="50" Width="96" FontSize="20" Click="BtnSetPassLen_Click"/>
         <Button x:Name="BtnPassGen" Content="GENERATE" Margin="592,124,0,0" VerticalAlignment="Top" Width="151" Height="103" FontSize="20" Click="BtnPassGen_Click"/>
-        <TextBox x:Name="TxtGenPasswds" HorizontalAlignment="Left" Margin="24,124,0,0" TextWrapping="Wrap" Text="Passwords" VerticalAlignment="Top" Height="414" Width="563" Background="#FF2B2B2B"/>
+        <TextBox x:Name="TxtGenPasswds" HorizontalAlignment="Left" Margin="24,124,0,0" Text="Passwords" VerticalAlignment="Top" Height="414" Width="563" Background="#FF2B2B2B" TextWrapping="Wrap"/>
+        <Button x:Name="BtnAddCapsAZ" Content="A - Z   &gt;&gt;" Margin="592,378,0,0" VerticalAlignment="Top" Width="151" Height="50" Click="BtnAddCapsAZ_Click"/>
+        <Button x:Name="BtnAddLowAZ" Content="a - z   &gt;&gt;" Margin="592,433,0,0" VerticalAlignment="Top" Width="151" Height="50" Click="BtnAddLowAZ_Click"/>
+        <Button x:Name="BtnAddNum" Content="0 - 9   &gt;&gt;" Margin="592,488,0,0" VerticalAlignment="Top" Width="151" Height="50" Click="BtnAddNum_Click"/>
 
     </Grid>
 </Page>

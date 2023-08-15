@@ -14,13 +14,10 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace PasswordsDictionaryBuilder
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    
     public sealed partial class MainPage : Page
     {
         //Password Length
@@ -55,6 +52,7 @@ namespace PasswordsDictionaryBuilder
 
         }
 
+        //Remove Selected items from list
         private void RemoveFromList_Click(object sender, RoutedEventArgs e)
         {
             while (ListOfCharacters.SelectedItems.Count > 0)
@@ -67,18 +65,67 @@ namespace PasswordsDictionaryBuilder
 
         }
 
+        //Add all Upper Case Alphabets to the list ( A to Z )
+        private void BtnAddCapsAZ_Click(object sender, RoutedEventArgs e)
+        {
+            char[] CapsAlphaBets = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+
+            for(int i = 0; i<CapsAlphaBets.Length; i++) 
+            {
+                if (!ListOfCharacters.Items.Contains(CapsAlphaBets[i]))
+                {
+                    ListOfCharacters.Items.Add(CapsAlphaBets[i]);
+                }
+            }
+            
+        }
+
+        //Add all Lower Case Alphabets to the list ( a to z ) 
+        private void BtnAddLowAZ_Click(object sender, RoutedEventArgs e)
+        {
+            char[] LowerAlphaBets = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+
+            for (int i = 0; i < LowerAlphaBets.Length; i++)
+            {
+                if (!ListOfCharacters.Items.Contains(LowerAlphaBets[i]))
+                {
+                    ListOfCharacters.Items.Add(LowerAlphaBets[i]);
+                }
+            }
+        }
+
+        //Add all Numbers to the list ( 0 - 9 )
+        private void BtnAddNum_Click(object sender, RoutedEventArgs e)
+        {
+            char[] AllNums = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+            for (int i = 0; i < AllNums.Length; i++)
+            {
+                if (!ListOfCharacters.Items.Contains(AllNums[i]))
+                {
+                    ListOfCharacters.Items.Add(AllNums[i]);
+                }
+            }
+        }
+
         private void BtnPassGen_Click(object sender, RoutedEventArgs e)
         {
             TxtGenPasswds.Text = "";
-            if(ListOfCharacters.Items.Count > 0)
+            if (ListOfCharacters.Items.Count > 0)
             {
-                List<string> charList = new List<string>();
-                foreach(string s in ListOfCharacters.Items)
+                List<char> charList = new List<char>();
+                foreach (char s in ListOfCharacters.Items)
                 {
                     charList.Add(s);
                 }
 
-                                
+                for (int i = 0; i < charList.Count; i++)
+                {
+                    TxtGenPasswds.Text += charList[i];
+
+                }
+
+
 
             }
         }
