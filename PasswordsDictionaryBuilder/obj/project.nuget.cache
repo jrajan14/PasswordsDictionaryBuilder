@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UeHPqsvkE47UFC0YZer0Mz2UA2JNa+N8B2cDiIx2TgaNuSmSg3P4kHmEoc0bsWj7ozBX6vIfvLgdiyET40xAPg==",
+  "dgSpecHash": "dOvd6/CMwTG88tpfroD+Nl4Fke3s+d+WQxtVhFAhWXrwWH7NLjOvJoID9Kqj8T09cEdouO0bAdRYZ/X76PDT/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jraja\\Documents\\GitHub\\PasswordsDictionaryBuilder\\PasswordsDictionaryBuilder\\PasswordsDictionaryBuilder\\PasswordsDictionaryBuilder.csproj",
+  "projectFilePath": "C:\\Users\\jraja\\Documents\\GitHub\\PasswordsDictionaryBuilder\\PasswordsDictionaryBuilder\\PasswordsDictionaryBuilder.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.12-rel-31116-00\\microsoft.net.native.compiler.2.2.12-rel-31116-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.14\\microsoft.net.uwpcoreruntimesdk.2.2.14.nupkg.sha512",

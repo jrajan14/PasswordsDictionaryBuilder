@@ -78,12 +78,7 @@ namespace PasswordsDictionaryBuilder
                     charList.Add(s);
                 }
 
-
-
-                for (int i = 0; i < ListOfCharacters.Items.Count; i++)
-                {
-                    TxtGenPasswds.Text += ListOfCharacters.Items[i] + " ";
-                }
+                                
 
             }
         }

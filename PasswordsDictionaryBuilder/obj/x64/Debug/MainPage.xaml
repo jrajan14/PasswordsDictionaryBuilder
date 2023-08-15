@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="PasswordsDictionaryBuilder.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PasswordsDictionaryBuilder"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="0,0,-46,-34">
+        <ListBox x:ConnectionId='2' x:Name="ListOfCharacters" HorizontalAlignment="Left" Margin="1262,28,0,96" Width="208" SelectionMode="Multiple"/>
+        <Button x:ConnectionId='3' x:Name="AddToList" Content="ADD  &gt;&gt;" Margin="1106,28,0,0" VerticalAlignment="Top" Height="50" Width="151"                         FontSize="20"/>
+        <Button x:ConnectionId='4' x:Name="RemoveFromList" Content="&lt;&lt;  REMOVE" Margin="1106,83,0,0" VerticalAlignment="Top" Height="50" Width="151" FontSize="20"                             />
+        <TextBox x:ConnectionId='5' x:Name="TxtCharacter" HorizontalAlignment="Left" Margin="1000,28,0,0" TextWrapping="Wrap" Text="X" VerticalAlignment="Top" Height="50" Width="96" RenderTransformOrigin="0.5,0.5" TextAlignment="Center" FontSize="30">
+            <TextBox.RenderTransform>
+                <CompositeTransform TranslateX="5"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="703,28,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Height="50" FontSize="30" TextAlignment="Center" Width="96"/>
+        <TextBlock HorizontalAlignment="Left" Margin="532,40,0,0" TextWrapping="Wrap" Text="Password Length" VerticalAlignment="Top" Width="159" FontSize="20"/>
+        <Button x:ConnectionId='6' x:Name="BtnSetPassLen" Content="SET" Margin="814,28,0,0" VerticalAlignment="Top" Height="50" Width="96" FontSize="20"                            />
+        <Button x:ConnectionId='7' x:Name="BtnPassGen" Content="GENERATE" Margin="1106,145,0,0" VerticalAlignment="Top" Width="151" Height="103" FontSize="20"                         />
+        <TextBox x:ConnectionId='8' x:Name="TxtGenPasswds" HorizontalAlignment="Left" Margin="538,145,0,0" TextWrapping="Wrap" Text="Passwords" VerticalAlignment="Top" Height="414" Width="563" Background="#FF2B2B2B"/>
+
+    </Grid>
+</Page>
+
