@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using Windows.ApplicationModel.Contacts;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -21,7 +22,13 @@ namespace PasswordsDictionaryBuilder
     public sealed partial class MainPage : Page
     {
         //Password Length
-        int PassLen = 1;
+        int PassLen = 3;
+
+        //List of Characters
+        List<char> charList = new List<char>();
+
+        //List of Generated Passwords
+        List<string> Passwords = new List<string>();
 
         public MainPage()
         {
@@ -42,7 +49,8 @@ namespace PasswordsDictionaryBuilder
             }
             else if(!ListOfCharacters.Items.Contains(TxtCharacter.Text))
             {
-                ListOfCharacters.Items.Add(TxtCharacter.Text);
+                char newChar = char.Parse(TxtCharacter.Text);
+                ListOfCharacters.Items.Add(newChar);
                 //LOG ITEM ADDED
             }
             else
@@ -108,26 +116,36 @@ namespace PasswordsDictionaryBuilder
             }
         }
 
+        /*
+                                WORD GENERATOR                  
+        */
         private void BtnPassGen_Click(object sender, RoutedEventArgs e)
         {
-            TxtGenPasswds.Text = "";
+            TxtGenPasswds.Text = ""; //CLEAR
+
             if (ListOfCharacters.Items.Count > 0)
             {
-                List<char> charList = new List<char>();
                 foreach (char s in ListOfCharacters.Items)
                 {
                     charList.Add(s);
                 }
 
-                for (int i = 0; i < charList.Count; i++)
-                {
-                    TxtGenPasswds.Text += charList[i];
+                //WORD GENERATION FUNCTION HERE
 
+                foreach (string word in Passwords)
+                {
+                    TxtGenPasswds.Text += word + " ";
                 }
 
-
+                Passwords.Clear();
 
             }
         }
+
+        /*
+                              WORD GENERATION FUNCTION 
+        */
+
+       
     }
 }

@@ -17,7 +17,7 @@
                 <CompositeTransform TranslateX="5"/>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="189,7,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Height="50" FontSize="30" TextAlignment="Center" Width="96"/>
+        <TextBox HorizontalAlignment="Left" Margin="189,7,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Height="50" FontSize="30" TextAlignment="Center" Width="96"/>
         <TextBlock HorizontalAlignment="Left" Margin="18,19,0,0" TextWrapping="Wrap" Text="Password Length" VerticalAlignment="Top" Width="159" FontSize="20"/>
         <Button x:Name="BtnSetPassLen" Content="SET" Margin="300,7,0,0" VerticalAlignment="Top" Height="50" Width="96" FontSize="20" Click="BtnSetPassLen_Click"/>
         <Button x:Name="BtnPassGen" Content="GENERATE" Margin="592,124,0,0" VerticalAlignment="Top" Width="151" Height="103" FontSize="20" Click="BtnPassGen_Click"/>
