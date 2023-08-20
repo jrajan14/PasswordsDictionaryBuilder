@@ -130,8 +130,9 @@ namespace PasswordsDictionaryBuilder
                     charList.Add(s);
                 }
 
-                //WORD GENERATION FUNCTION HERE
+                GeneratePasswords();
 
+                //Print all passwords
                 foreach (string word in Passwords)
                 {
                     TxtGenPasswds.Text += word + " ";
@@ -142,10 +143,9 @@ namespace PasswordsDictionaryBuilder
             }
         }
 
-        /*
-                              WORD GENERATION FUNCTION 
-        */
-
-       
+        private void GeneratePasswords()
+        {
+            //LOGIC HERE
+        }      
     }
 }
